@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OneDay.h"
 
-@interface DataViewController : UIViewController
+@interface DataViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *dataLabel;
-@property (strong, nonatomic) id dataObject;
+@property (strong, nonatomic)  OneDay* oneDay;
 
 @end
 
