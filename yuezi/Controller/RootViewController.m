@@ -26,7 +26,8 @@
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.delegate = self;
 
-    DataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
+    UINavigationController* startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
+    DataViewController *dataViewController = startingViewController.topViewController;
     NSArray *viewControllers = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
 
@@ -74,7 +75,7 @@
     }
 
     // In landscape orientation: Set set the spine location to "mid" and the page view controller's view controllers array to contain two view controllers. If the current page is even, set it to contain the current and next view controllers; if it is odd, set the array to contain the previous and current view controllers.
-    DataViewController *currentViewController = self.pageViewController.viewControllers[0];
+    UINavigationController *currentViewController = self.pageViewController.viewControllers[0];
     NSArray *viewControllers = nil;
 
     NSUInteger indexOfCurrentViewController = [self.modelController indexOfViewController:currentViewController];

@@ -35,7 +35,7 @@
         
         NSString *dishPath = [[NSBundle mainBundle] pathForResource:@"dish" ofType:@"plist"];
         NSArray *dArray = [[NSArray alloc] initWithContentsOfFile:dishPath];
-        NSArray* dishArray = [Meterial objectArrayWithKeyValuesArray:dArray];
+        NSArray* dishArray = [Dish objectArrayWithKeyValuesArray:dArray];
         NSMutableDictionary* dDict = [NSMutableDictionary dictionary];
         for(Dish* d in dishArray){
             [dDict setObject:d forKey:[NSNumber numberWithInt:d.ID]];
@@ -312,6 +312,8 @@
 }
 
 
-
+-(id)meterialForKey:(NSNumber *)key{
+    return _meterialDict[key];
+}
 
 @end

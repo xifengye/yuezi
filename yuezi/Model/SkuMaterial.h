@@ -10,7 +10,7 @@
 #import "Meterial.h"
 
 @interface SkuMaterial : NSObject
-@property(nonatomic,strong)Meterial* material;
+@property(nonatomic,assign)int ID;
 @property(nonatomic,assign)float amount;
 
 @end

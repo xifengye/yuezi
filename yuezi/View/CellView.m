@@ -45,11 +45,36 @@
 
 -(void)setPeriod:(Period *)period{
     _period = period;
+    UIFont* font = [UIFont fontWithName:@"Helvetica-Bold"  size:(25.0)];
     
-    self.nameLabel.frame = CGRectMake(0, 0, self.frame.size.width*0.25, CellHeight*period.dishes.count);
+    self.nameLabel.frame = CGRectMake(0, 0, self.frame.size.width*0.3, CellHeight*period.dishes.count);
     self.nameLabel.text = period.name;
     self.nameLabel.textAlignment = NSTextAlignmentCenter;
-    self.tableView.frame = CGRectMake(CGRectGetMaxX(self.nameLabel.frame), 0, self.frame.size.width*0.75, self.nameLabel.frame.size.height);
+    self.nameLabel.font = font;
+    self.nameLabel.textColor = [UIColor whiteColor];
+    switch (period.type) {
+        case PeriodTypeBreakfast:
+            self.nameLabel.backgroundColor = [UIColor orangeColor];
+            break;
+        case PeriodTypeBreakfastAfter:
+            self.nameLabel.backgroundColor = [UIColor redColor];
+            break;
+        case PeriodTypeLunch:
+            self.nameLabel.backgroundColor = [UIColor orangeColor];
+            break;
+        case PeriodTypeLunchAfter:
+            self.nameLabel.backgroundColor = [UIColor redColor];
+            break;
+        case PeriodTypeSupper:
+            self.nameLabel.backgroundColor = [UIColor orangeColor];
+            break;
+        case PeriodTypeSupperAfter:
+            self.nameLabel.backgroundColor = [UIColor redColor];
+            break;
+         default:
+            break;
+    }
+    self.tableView.frame = CGRectMake(CGRectGetMaxX(self.nameLabel.frame), 0, self.frame.size.width*0.85, self.nameLabel.frame.size.height);
     [self.tableView reloadData];
     
     
@@ -71,18 +96,24 @@
     static NSString *CMainCell = @"DishCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CMainCell];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier: CMainCell];
     }
-    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator; //显示最右边的箭头
     Dish* dish = _period.dishes[indexPath.row];
     cell.textLabel.text = dish.name;
+    UIFont* font = [UIFont fontWithName:@"Helvetica"  size:(15.0)];
+    cell.textLabel.font = font;
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     Dish* dish = _period.dishes[indexPath.row];
+    if([self.delegate respondsToSelector:@selector(didSelectedDish:)]){
+        [self.delegate didSelectedDish:dish];
+    }
     
 }
 

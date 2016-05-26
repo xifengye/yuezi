@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "OneDay.h"
+#import "Meterial.h"
 
 
 @interface Manager : NSObject
@@ -16,5 +17,6 @@
 
 +(instancetype)instance;
 -(OneDay*)getOneDay:(int)position;
+-(Meterial*)meterialForKey:(NSNumber*)key;
 
 @end

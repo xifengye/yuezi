@@ -41,16 +41,18 @@
     return self;
 }
 
-- (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard {
+- (UINavigationController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard {
     // Return the data view controller for the given index.
     if (([self.pageData count] == 0) || (index >= [self.pageData count])) {
         return nil;
     }
 
     // Create a new view controller and pass suitable data.
+    
     DataViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
     dataViewController.oneDay = self.pageData[index];
-    return dataViewController;
+    UINavigationController* navController = [[UINavigationController alloc]initWithRootViewController:dataViewController];
+    return navController;
 }
 
 - (NSUInteger)indexOfViewController:(DataViewController *)viewController {
@@ -63,18 +65,20 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
-    NSUInteger index = [self indexOfViewController:(DataViewController *)viewController];
+    UINavigationController* navController = viewController;
+    NSUInteger index = [self indexOfViewController:(DataViewController *)navController.topViewController];
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
     }
     
     index--;
-    return [self viewControllerAtIndex:index storyboard:viewController.storyboard];
+    return [self viewControllerAtIndex:index storyboard:navController.topViewController.storyboard];
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
-    NSUInteger index = [self indexOfViewController:(DataViewController *)viewController];
+    UINavigationController* navController = viewController;
+    NSUInteger index = [self indexOfViewController:(DataViewController *)navController.topViewController];
     if (index == NSNotFound) {
         return nil;
     }
@@ -83,7 +87,7 @@
     if (index == [self.pageData count]) {
         return nil;
     }
-    return [self viewControllerAtIndex:index storyboard:viewController.storyboard];
+    return [self viewControllerAtIndex:index storyboard:navController.topViewController.storyboard];
 }
 
 @end

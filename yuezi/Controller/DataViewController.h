@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "OneDay.h"
+#import "CellView.h"
 
-@interface DataViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface DataViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,CellViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UILabel *dataLabel;
 @property (strong, nonatomic)  OneDay* oneDay;
+@property(nonatomic,weak)UITableView* tableView;
 
 @end
 

@@ -93,8 +93,8 @@
 		FCC491CE1CF6C04800F6A942 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC491C31CF6C04800F6A942 /* NSObject+MJCoding.m */; };
 		FCC491CF1CF6C04800F6A942 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC491C51CF6C04800F6A942 /* NSObject+MJKeyValue.m */; };
 		FCC491D01CF6C04800F6A942 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC491C71CF6C04800F6A942 /* NSObject+MJMember.m */; };
-		FCC491D61CF6D9AE00F6A942 /* SM.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC491D51CF6D9AE00F6A942 /* SM.m */; };
 		FCC491D91CF6DE1B00F6A942 /* CellView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC491D81CF6DE1B00F6A942 /* CellView.m */; };
+		FCC491DC1CF6F44400F6A942 /* DishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC491DB1CF6F44400F6A942 /* DishViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,10 +236,10 @@
 		FCC491C51CF6C04800F6A942 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
 		FCC491C61CF6C04800F6A942 /* NSObject+MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJMember.h"; sourceTree = "<group>"; };
 		FCC491C71CF6C04800F6A942 /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
-		FCC491D41CF6D9AE00F6A942 /* SM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SM.h; sourceTree = "<group>"; };
-		FCC491D51CF6D9AE00F6A942 /* SM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SM.m; sourceTree = "<group>"; };
 		FCC491D71CF6DE1B00F6A942 /* CellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellView.h; sourceTree = "<group>"; };
 		FCC491D81CF6DE1B00F6A942 /* CellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellView.m; sourceTree = "<group>"; };
+		FCC491DA1CF6F44400F6A942 /* DishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishViewController.h; sourceTree = "<group>"; };
+		FCC491DB1CF6F44400F6A942 /* DishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +340,8 @@
 				FCC491121CF6A63200F6A942 /* ModelController.m */,
 				FCC491131CF6A63200F6A942 /* RootViewController.h */,
 				FCC491141CF6A63200F6A942 /* RootViewController.m */,
+				FCC491DA1CF6F44400F6A942 /* DishViewController.h */,
+				FCC491DB1CF6F44400F6A942 /* DishViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -429,8 +431,6 @@
 				FCC491AC1CF6BC8100F6A942 /* SupperAfter.m */,
 				FCC491AE1CF6BCB400F6A942 /* OneDay.h */,
 				FCC491AF1CF6BCB400F6A942 /* OneDay.m */,
-				FCC491D41CF6D9AE00F6A942 /* SM.h */,
-				FCC491D51CF6D9AE00F6A942 /* SM.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -672,8 +672,8 @@
 			files = (
 				FCC491551CF6A63200F6A942 /* ModelController.m in Sources */,
 				FCC491C81CF6C04800F6A942 /* MJArgument.m in Sources */,
-				FCC491D61CF6D9AE00F6A942 /* SM.m in Sources */,
 				FCC4919E1CF6BB9400F6A942 /* Breakfast.m in Sources */,
+				FCC491DC1CF6F44400F6A942 /* DishViewController.m in Sources */,
 				FCC491AA1CF6BC6E00F6A942 /* Supper.m in Sources */,
 				FCC491CC1CF6C04800F6A942 /* MJType.m in Sources */,
 				FCC491CD1CF6C04800F6A942 /* MJTypeEncoding.m in Sources */,
@@ -926,6 +926,7 @@
 				FCC490FA1CF6911800F6A942 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCC490FB1CF6911800F6A942 /* Build configuration list for PBXNativeTarget "yueziTests" */ = {
 			isa = XCConfigurationList;
@@ -934,6 +935,7 @@
 				FCC490FD1CF6911800F6A942 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCC490FE1CF6911800F6A942 /* Build configuration list for PBXNativeTarget "yueziUITests" */ = {
 			isa = XCConfigurationList;
@@ -942,6 +944,7 @@
 				FCC491001CF6911800F6A942 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

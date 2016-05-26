@@ -12,8 +12,8 @@
 
 @interface ModelController : NSObject <UIPageViewControllerDataSource>
 
-- (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard;
-- (NSUInteger)indexOfViewController:(DataViewController *)viewController;
+- (UINavigationController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard;
+- (NSUInteger)indexOfViewController:(UINavigationController *)viewController;
 
 @end
 
