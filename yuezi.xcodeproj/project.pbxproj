@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FCC490CA1CF6911800F6A942 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC490C91CF6911800F6A942 /* main.m */; };
+		FCC490CD1CF6911800F6A942 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC490CC1CF6911800F6A942 /* AppDelegate.m */; };
+		FCC490D01CF6911800F6A942 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC490CF1CF6911800F6A942 /* RootViewController.m */; };
+		FCC490D31CF6911800F6A942 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC490D21CF6911800F6A942 /* DataViewController.m */; };
+		FCC490D61CF6911800F6A942 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC490D51CF6911800F6A942 /* ModelController.m */; };
+		FCC490D91CF6911800F6A942 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC490D71CF6911800F6A942 /* Main.storyboard */; };
+		FCC490DB1CF6911800F6A942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC490DA1CF6911800F6A942 /* Assets.xcassets */; };
+		FCC490DE1CF6911800F6A942 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC490DC1CF6911800F6A942 /* LaunchScreen.storyboard */; };
+		FCC490E91CF6911800F6A942 /* yueziTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC490E81CF6911800F6A942 /* yueziTests.m */; };
+		FCC490F41CF6911800F6A942 /* yueziUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC490F31CF6911800F6A942 /* yueziUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FCC490E51CF6911800F6A942 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCC490BD1CF6911700F6A942 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCC490C41CF6911800F6A942;
+			remoteInfo = yuezi;
+		};
+		FCC490F01CF6911800F6A942 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCC490BD1CF6911700F6A942 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCC490C41CF6911800F6A942;
+			remoteInfo = yuezi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FCC490C51CF6911800F6A942 /* yuezi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yuezi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC490C91CF6911800F6A942 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FCC490CB1CF6911800F6A942 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FCC490CC1CF6911800F6A942 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FCC490CE1CF6911800F6A942 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		FCC490CF1CF6911800F6A942 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		FCC490D11CF6911800F6A942 /* DataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		FCC490D21CF6911800F6A942 /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		FCC490D41CF6911800F6A942 /* ModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
+		FCC490D51CF6911800F6A942 /* ModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
+		FCC490D81CF6911800F6A942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCC490DA1CF6911800F6A942 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCC490DD1CF6911800F6A942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FCC490DF1CF6911800F6A942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCC490E41CF6911800F6A942 /* yueziTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yueziTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC490E81CF6911800F6A942 /* yueziTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yueziTests.m; sourceTree = "<group>"; };
+		FCC490EA1CF6911800F6A942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCC490EF1CF6911800F6A942 /* yueziUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yueziUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC490F31CF6911800F6A942 /* yueziUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yueziUITests.m; sourceTree = "<group>"; };
+		FCC490F51CF6911800F6A942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCC490C21CF6911800F6A942 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCC490E11CF6911800F6A942 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCC490EC1CF6911800F6A942 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FCC490BC1CF6911700F6A942 = {
+			isa = PBXGroup;
+			children = (
+				FCC490C71CF6911800F6A942 /* yuezi */,
+				FCC490E71CF6911800F6A942 /* yueziTests */,
+				FCC490F21CF6911800F6A942 /* yueziUITests */,
+				FCC490C61CF6911800F6A942 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FCC490C61CF6911800F6A942 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCC490C51CF6911800F6A942 /* yuezi.app */,
+				FCC490E41CF6911800F6A942 /* yueziTests.xctest */,
+				FCC490EF1CF6911800F6A942 /* yueziUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCC490C71CF6911800F6A942 /* yuezi */ = {
+			isa = PBXGroup;
+			children = (
+				FCC490CB1CF6911800F6A942 /* AppDelegate.h */,
+				FCC490CC1CF6911800F6A942 /* AppDelegate.m */,
+				FCC490CE1CF6911800F6A942 /* RootViewController.h */,
+				FCC490CF1CF6911800F6A942 /* RootViewController.m */,
+				FCC490D11CF6911800F6A942 /* DataViewController.h */,
+				FCC490D21CF6911800F6A942 /* DataViewController.m */,
+				FCC490D41CF6911800F6A942 /* ModelController.h */,
+				FCC490D51CF6911800F6A942 /* ModelController.m */,
+				FCC490D71CF6911800F6A942 /* Main.storyboard */,
+				FCC490DA1CF6911800F6A942 /* Assets.xcassets */,
+				FCC490DC1CF6911800F6A942 /* LaunchScreen.storyboard */,
+				FCC490DF1CF6911800F6A942 /* Info.plist */,
+				FCC490C81CF6911800F6A942 /* Supporting Files */,
+			);
+			path = yuezi;
+			sourceTree = "<group>";
+		};
+		FCC490C81CF6911800F6A942 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FCC490C91CF6911800F6A942 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FCC490E71CF6911800F6A942 /* yueziTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCC490E81CF6911800F6A942 /* yueziTests.m */,
+				FCC490EA1CF6911800F6A942 /* Info.plist */,
+			);
+			path = yueziTests;
+			sourceTree = "<group>";
+		};
+		FCC490F21CF6911800F6A942 /* yueziUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FCC490F31CF6911800F6A942 /* yueziUITests.m */,
+				FCC490F51CF6911800F6A942 /* Info.plist */,
+			);
+			path = yueziUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCC490C41CF6911800F6A942 /* yuezi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCC490F81CF6911800F6A942 /* Build configuration list for PBXNativeTarget "yuezi" */;
+			buildPhases = (
+				FCC490C11CF6911800F6A942 /* Sources */,
+				FCC490C21CF6911800F6A942 /* Frameworks */,
+				FCC490C31CF6911800F6A942 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = yuezi;
+			productName = yuezi;
+			productReference = FCC490C51CF6911800F6A942 /* yuezi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FCC490E31CF6911800F6A942 /* yueziTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCC490FB1CF6911800F6A942 /* Build configuration list for PBXNativeTarget "yueziTests" */;
+			buildPhases = (
+				FCC490E01CF6911800F6A942 /* Sources */,
+				FCC490E11CF6911800F6A942 /* Frameworks */,
+				FCC490E21CF6911800F6A942 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCC490E61CF6911800F6A942 /* PBXTargetDependency */,
+			);
+			name = yueziTests;
+			productName = yueziTests;
+			productReference = FCC490E41CF6911800F6A942 /* yueziTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FCC490EE1CF6911800F6A942 /* yueziUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCC490FE1CF6911800F6A942 /* Build configuration list for PBXNativeTarget "yueziUITests" */;
+			buildPhases = (
+				FCC490EB1CF6911800F6A942 /* Sources */,
+				FCC490EC1CF6911800F6A942 /* Frameworks */,
+				FCC490ED1CF6911800F6A942 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCC490F11CF6911800F6A942 /* PBXTargetDependency */,
+			);
+			name = yueziUITests;
+			productName = yueziUITests;
+			productReference = FCC490EF1CF6911800F6A942 /* yueziUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCC490BD1CF6911700F6A942 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = moregood;
+				TargetAttributes = {
+					FCC490C41CF6911800F6A942 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					FCC490E31CF6911800F6A942 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = FCC490C41CF6911800F6A942;
+					};
+					FCC490EE1CF6911800F6A942 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = FCC490C41CF6911800F6A942;
+					};
+				};
+			};
+			buildConfigurationList = FCC490C01CF6911700F6A942 /* Build configuration list for PBXProject "yuezi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCC490BC1CF6911700F6A942;
+			productRefGroup = FCC490C61CF6911800F6A942 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCC490C41CF6911800F6A942 /* yuezi */,
+				FCC490E31CF6911800F6A942 /* yueziTests */,
+				FCC490EE1CF6911800F6A942 /* yueziUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCC490C31CF6911800F6A942 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC490DE1CF6911800F6A942 /* LaunchScreen.storyboard in Resources */,
+				FCC490DB1CF6911800F6A942 /* Assets.xcassets in Resources */,
+				FCC490D91CF6911800F6A942 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCC490E21CF6911800F6A942 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCC490ED1CF6911800F6A942 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCC490C11CF6911800F6A942 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC490D31CF6911800F6A942 /* DataViewController.m in Sources */,
+				FCC490CD1CF6911800F6A942 /* AppDelegate.m in Sources */,
+				FCC490D61CF6911800F6A942 /* ModelController.m in Sources */,
+				FCC490CA1CF6911800F6A942 /* main.m in Sources */,
+				FCC490D01CF6911800F6A942 /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCC490E01CF6911800F6A942 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC490E91CF6911800F6A942 /* yueziTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCC490EB1CF6911800F6A942 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC490F41CF6911800F6A942 /* yueziUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FCC490E61CF6911800F6A942 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCC490C41CF6911800F6A942 /* yuezi */;
+			targetProxy = FCC490E51CF6911800F6A942 /* PBXContainerItemProxy */;
+		};
+		FCC490F11CF6911800F6A942 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCC490C41CF6911800F6A942 /* yuezi */;
+			targetProxy = FCC490F01CF6911800F6A942 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FCC490D71CF6911800F6A942 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCC490D81CF6911800F6A942 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FCC490DC1CF6911800F6A942 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCC490DD1CF6911800F6A942 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCC490F61CF6911800F6A942 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		FCC490F71CF6911800F6A942 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCC490F91CF6911800F6A942 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = yuezi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnmolijie.MoliJie.yuezi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FCC490FA1CF6911800F6A942 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = yuezi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnmolijie.MoliJie.yuezi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FCC490FC1CF6911800F6A942 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = yueziTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnmolijie.MoliJie.yueziTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yuezi.app/yuezi";
+			};
+			name = Debug;
+		};
+		FCC490FD1CF6911800F6A942 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = yueziTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnmolijie.MoliJie.yueziTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yuezi.app/yuezi";
+			};
+			name = Release;
+		};
+		FCC490FF1CF6911800F6A942 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = yueziUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnmolijie.MoliJie.yueziUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = yuezi;
+			};
+			name = Debug;
+		};
+		FCC491001CF6911800F6A942 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = yueziUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnmolijie.MoliJie.yueziUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = yuezi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCC490C01CF6911700F6A942 /* Build configuration list for PBXProject "yuezi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC490F61CF6911800F6A942 /* Debug */,
+				FCC490F71CF6911800F6A942 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCC490F81CF6911800F6A942 /* Build configuration list for PBXNativeTarget "yuezi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC490F91CF6911800F6A942 /* Debug */,
+				FCC490FA1CF6911800F6A942 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FCC490FB1CF6911800F6A942 /* Build configuration list for PBXNativeTarget "yueziTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC490FC1CF6911800F6A942 /* Debug */,
+				FCC490FD1CF6911800F6A942 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FCC490FE1CF6911800F6A942 /* Build configuration list for PBXNativeTarget "yueziUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC490FF1CF6911800F6A942 /* Debug */,
+				FCC491001CF6911800F6A942 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCC490BD1CF6911700F6A942 /* Project object */;
+}
