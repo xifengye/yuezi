@@ -18,5 +18,6 @@
 +(instancetype)instance;
 -(OneDay*)getOneDay:(int)position;
 -(Meterial*)meterialForKey:(NSNumber*)key;
+-(NSArray*)meterialList;
 
 @end

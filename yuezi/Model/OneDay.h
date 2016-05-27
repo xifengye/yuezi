@@ -18,5 +18,6 @@ typedef enum : NSUInteger {
 @interface OneDay : NSObject
 @property(nonatomic,strong)NSArray* periods;
 @property(nonatomic,assign)int dayIndex;
+-(NSArray*)todayMeterialList;
 
 @end

@@ -23,6 +23,45 @@
             </objects>
             <point key="canvasLocation" x="-101" y="-243"/>
         </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="KzI-0N-7fV">
+            <objects>
+                <viewController storyboardIdentifier="setting" id="nEt-B5-deH" customClass="SettingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DRh-Eu-Udh"/>
+                        <viewControllerLayoutGuide type="bottom" id="eba-Dv-0lH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IMo-C3-K9M">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hNu-ho-i28">
+                                <rect key="frame" x="0.0" y="192" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="486022957.99913198">
+                                    <!--2016-05-27 06:22:37 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="选择月子开始日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68r-VQ-UBj">
+                                <rect key="frame" x="229" y="136" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="68r-VQ-UBj" firstAttribute="centerX" secondItem="IMo-C3-K9M" secondAttribute="centerX" id="Wwy-mw-SrB"/>
+                            <constraint firstItem="hNu-ho-i28" firstAttribute="centerX" secondItem="IMo-C3-K9M" secondAttribute="centerX" id="f1e-f2-ct0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="hNu-ho-i28" id="NT7-rk-wle"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-N2-slQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="619" y="-939"/>
+        </scene>
         <!--Data View Controller-->
         <scene sceneID="snT-py-3hH">
             <objects>

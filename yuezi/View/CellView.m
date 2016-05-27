@@ -47,7 +47,7 @@
     _period = period;
     UIFont* font = [UIFont fontWithName:@"Helvetica-Bold"  size:(25.0)];
     
-    self.nameLabel.frame = CGRectMake(0, 0, self.frame.size.width*0.3, CellHeight*period.dishes.count);
+    self.nameLabel.frame = CGRectMake(0, 0, self.frame.size.width*0.4, CellHeight*period.dishes.count);
     self.nameLabel.text = period.name;
     self.nameLabel.textAlignment = NSTextAlignmentCenter;
     self.nameLabel.font = font;
@@ -74,7 +74,7 @@
          default:
             break;
     }
-    self.tableView.frame = CGRectMake(CGRectGetMaxX(self.nameLabel.frame), 0, self.frame.size.width*0.85, self.nameLabel.frame.size.height);
+    self.tableView.frame = CGRectMake(CGRectGetMaxX(self.nameLabel.frame), 0, self.frame.size.width*0.6, self.nameLabel.frame.size.height);
     [self.tableView reloadData];
     
     

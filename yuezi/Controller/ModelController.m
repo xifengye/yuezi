@@ -31,6 +31,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
+        firstIn = true;
         NSMutableArray* array = [NSMutableArray array];
         // Create the data model.
         for(int i=0;i<28;i++){
@@ -46,7 +47,29 @@
     if (([self.pageData count] == 0) || (index >= [self.pageData count])) {
         return nil;
     }
-
+    if(firstIn){
+        index = 5;
+        firstIn = false;
+        
+        NSDate* _date = [NSDate date];
+        NSUInteger unitFlags = NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit;
+        NSDateComponents * component = [[NSCalendar currentCalendar]components:unitFlags fromDate:_date];
+         NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+        int month = ((NSString*)[defaults objectForKey:@"_month"]).intValue;
+        int day = ((NSString*)[defaults objectForKey:@"_day"]).intValue;
+        if(month<[component month]){
+            index = 0;
+        }else if([component month]==month){
+            if(day<[component day]){
+                index = [component day]-day;
+            }else{
+                index = 0;
+            }
+        }else{
+            index = 0;
+        }
+        
+    }
     // Create a new view controller and pass suitable data.
     
     DataViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
@@ -56,8 +79,6 @@
 }
 
 - (NSUInteger)indexOfViewController:(DataViewController *)viewController {
-    // Return the index of the given data view controller.
-    // For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
     return [self.pageData indexOfObject:viewController.oneDay];
 }
 
@@ -66,28 +87,41 @@
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
     UINavigationController* navController = viewController;
-    NSUInteger index = [self indexOfViewController:(DataViewController *)navController.topViewController];
-    if ((index == 0) || (index == NSNotFound)) {
+    UIViewController* topViewController = navController.topViewController;
+    NSUInteger index =0;
+    if([topViewController isKindOfClass:[DataViewController class]]){
+        index = [self indexOfViewController:(DataViewController *)topViewController];
+        if ((index == 0) || (index == NSNotFound)) {
+            return nil;
+        }
+        
+        index--;
+    }else{
         return nil;
     }
-    
-    index--;
     return [self viewControllerAtIndex:index storyboard:navController.topViewController.storyboard];
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
     UINavigationController* navController = viewController;
-    NSUInteger index = [self indexOfViewController:(DataViewController *)navController.topViewController];
-    if (index == NSNotFound) {
+    UIViewController* topViewController = navController.topViewController;
+    NSUInteger index =0;
+    if([topViewController isKindOfClass:[DataViewController class]]){
+        index = [self indexOfViewController:(DataViewController *)topViewController];
+        if (index == NSNotFound) {
+            return nil;
+        }
+        
+        index++;
+        if (index == [self.pageData count]) {
+            return nil;
+        }
+
+    }else{
         return nil;
     }
-    
-    index++;
-    if (index == [self.pageData count]) {
-        return nil;
-    }
-    return [self viewControllerAtIndex:index storyboard:navController.topViewController.storyboard];
+     return [self viewControllerAtIndex:index storyboard:navController.topViewController.storyboard];
 }
 
 @end

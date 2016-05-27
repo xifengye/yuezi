@@ -312,6 +312,39 @@
 }
 
 
+-(NSArray *)meterialList{
+    NSMutableDictionary* dict = [NSMutableDictionary dictionary];
+    for(int i=0;i<28;i++){
+        for(Period* p in [self getOneDay:i].periods){
+            for(Dish* d in p.dishes){
+                for(SkuMaterial* sm in d.materialList){
+                    NSNumber* key =[NSNumber numberWithInt:sm.ID];
+                    Meterial* m = [Manager instance].meterialDict[key];
+                    if(m){
+                        if([[dict allKeys] containsObject:key]){
+                            NSNumber* value = dict[key];
+                            NSNumber* newValue = [NSNumber numberWithFloat:value.floatValue+sm.amount];
+                            dict[key] = newValue;
+                        }else{
+                            NSNumber* newValue = [NSNumber numberWithFloat:sm.amount];
+                            [dict setObject:newValue forKey:key];
+                        }
+                    }
+                }
+            }
+        }
+    }
+    NSMutableArray* result = [NSMutableArray array];
+    for(NSNumber* key in dict.allKeys){
+        SkuMaterial* sm = [[SkuMaterial alloc]init];
+        sm.ID = key.intValue;
+        sm.amount = ((NSNumber*)dict[key]).floatValue;
+        [result addObject:sm];
+    }
+    return result;
+}
+
+
 -(id)meterialForKey:(NSNumber *)key{
     return _meterialDict[key];
 }

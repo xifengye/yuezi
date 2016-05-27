@@ -7,6 +7,7 @@
 //
 
 #import "ModelBase.h"
+#import "SkuMaterial.h"
 
 @interface Dish : ModelBase
 @property(nonatomic,copy)NSString* cookMethod;

@@ -10,7 +10,9 @@
 
 @class DataViewController;
 
-@interface ModelController : NSObject <UIPageViewControllerDataSource>
+@interface ModelController : NSObject <UIPageViewControllerDataSource>{
+    BOOL firstIn;
+}
 
 - (UINavigationController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard;
 - (NSUInteger)indexOfViewController:(UINavigationController *)viewController;

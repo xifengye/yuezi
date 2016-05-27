@@ -8,6 +8,7 @@
 
 #import "DataViewController.h"
 #import "DishViewController.h"
+#import "MeterialListController.h"
 
 
 @interface DataViewController ()
@@ -34,6 +35,24 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationItem.title = [self.oneDay description];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"今天食材" style:UIBarButtonItemStyleDone target:self action:@selector(didLeftBarItemClicked)];
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"28天食材" style:UIBarButtonItemStyleDone target:self action:@selector(didRightBarItemClicked)];
+    
+}
+
+-(void)didLeftBarItemClicked{
+    MeterialListController* controller = [[MeterialListController alloc]init];
+    controller.oneDay = self.oneDay;
+    [self.navigationController pushViewController:controller animated:true];
+
+}
+
+-(void)didRightBarItemClicked{
+    MeterialListController* controller = [[MeterialListController alloc]init];
+    controller.oneDay = nil;
+    [self.navigationController pushViewController:controller animated:true];
+    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
