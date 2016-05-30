@@ -13,7 +13,10 @@
 #import "DishCellView.h"
 
 
-@interface DishViewController ()
+@interface DishViewController (){
+    NSTimeInterval timeInterval;
+    NSTimer* timer;
+}
 
 @end
 
@@ -27,23 +30,63 @@
 //    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(didLeftBarItemClicked)];
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     //some initialize code here...
+    timeInterval = [[NSUserDefaults standardUserDefaults] doubleForKey:[NSString stringWithFormat:@"%ld_cooking_time",_dish.ID]];
     UIBarButtonItem *barItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     self.navigationItem.backBarButtonItem = barItem;
     self.navigationItem.title = self.dish.name;
     [self initSubView];
+    if(timeInterval>0){
+        timer = [NSTimer scheduledTimerWithTimeInterval:1.0/60.0 target:self selector:@selector(updateCookTime) userInfo:nil repeats:YES];
+        [timer fire];
+    }
+
+}
+
+-(void)updateCookTime{
+    long interval = [NSDate date].timeIntervalSince1970 - timeInterval;
+    int minute = (long)interval/60;
+    int second = (long)interval%60;
+    NSString* time = [NSString stringWithFormat:@"%d分 %d秒",minute,second];
+    [self.btnCooking setTitle:[NSString stringWithFormat:@"已煮 %@",time] forState:UIControlStateNormal];
 }
 
 -(void)didLeftBarItemClicked{
     [self.navigationController popViewControllerAnimated:true];
 }
 
+-(void)beginCook{
+    NSString* key = [NSString stringWithFormat:@"%ld_cooking_time",_dish.ID];
+    if(timer){
+        [[NSUserDefaults standardUserDefaults]removeObjectForKey:key];
+        [self.btnCooking setTitle:@"开始煮" forState:UIControlStateNormal];
+        [timer invalidate];
+        timer = nil;
+    }else{
+        timer = [NSTimer scheduledTimerWithTimeInterval:1.0/60.0 target:self selector:@selector(updateCookTime) userInfo:nil repeats:YES];
+        timeInterval = [NSDate date].timeIntervalSince1970;
+        [[NSUserDefaults standardUserDefaults]setDouble:timeInterval forKey:key];
+        [timer fire];
+    }
+    
+}
+
+-(void)dealloc{
+    if(timer){
+        [timer invalidate];
+        timer = nil;
+    }
+}
+
 -(void)initSubView{
     
-    UIButton* cookingBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-40, self.view.frame.size.width, 40)];
+    UIButton* cookingBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-44, self.view.frame.size.width, 44)];
     [cookingBtn setBackgroundColor:[UIColor redColor]];
     [cookingBtn setTitle:@"开始煮" forState:UIControlStateNormal];
     cookingBtn.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    [cookingBtn addTarget:self action:@selector(beginCook) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:cookingBtn];
+    self.btnCooking = cookingBtn;
+    
     UIScrollView* scView = [[UIScrollView alloc]init];
     [self.view addSubview:scView];
     scView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-cookingBtn.frame.size.height);
